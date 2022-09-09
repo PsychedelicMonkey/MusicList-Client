@@ -1,0 +1,55 @@
+.albums-cards {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 22px 0 30px;
+  border-top: 2px solid #eee;
+
+  .album {
+    width: 250px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease all;
+
+    &:hover {
+      box-shadow: 2px 2px 15px #ddd;
+    }
+
+    &-wrap {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr max-content;
+
+      .album-art {
+        width: 100%;
+        align-self: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        margin: 2px 0;
+        padding: 8px 0;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        h4 {
+          margin-top: 6px;
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
