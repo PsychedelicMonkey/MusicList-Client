@@ -17,9 +17,16 @@
       margin: 8px 0 12px;
     }
 
-    h3 {
+    .artist-name {
+      color: #111;
+      text-decoration: none;
       font-size: 26px;
       font-weight: 400;
+      transition: 0.3s ease all;
+
+      &:hover {
+        color: #aaa;
+      }
     }
 
     h4 {

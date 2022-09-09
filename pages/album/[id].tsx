@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import api from '../../lib/api';
 
 type Props = {
@@ -20,7 +21,11 @@ const Album: NextPage<Props> = ({ album }) => {
 
         <div className="album-title">
           <h1>{album.title}</h1>
-          <h3>{album.artists[0].name}</h3>
+
+          <Link href={`/artist/${album.artists[0]._id}`}>
+            <a className="artist-name">{album.artists[0].name}</a>
+          </Link>
+
           <h4>{album.year}</h4>
         </div>
 
