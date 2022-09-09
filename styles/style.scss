@@ -13,4 +13,20 @@
   }
 }
 
+.icon-list {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    font-size: 28px;
+    color: #111;
+    transition: 0.3s ease all;
+
+    &:hover {
+      color: #aaa;
+    }
+  }
+}
+
 @import 'pages/album';
+@import 'pages/artist';

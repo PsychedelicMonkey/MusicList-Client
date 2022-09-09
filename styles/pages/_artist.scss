@@ -1,0 +1,52 @@
+.artist-header {
+  text-align: center;
+
+  h1 {
+    font-size: 38px;
+    font-weight: 600;
+    margin: 22px 0 18px;
+  }
+
+  .artist-description {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 16px;
+  }
+
+  .active-members {
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 2px 0 8px;
+
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .artist-links {
+    margin: 22px 0 18px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+}

@@ -1,13 +1,7 @@
-import { GetServerSideProps, NextPage } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBandcamp,
-  faFacebook,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
-import React from 'react';
 import api from '../../lib/api';
+import IconList from '../../components/IconList';
 
 type Props = {
   artist: Artist;
@@ -22,27 +16,33 @@ const Artist: NextPage<Props> = ({ artist }) => {
         <title>{artist.name} - MusicList</title>
       </Head>
 
-      <img src={artist.images[0].uri} alt="" />
-      <h1>{artist.name}</h1>
-      <p>{artist.profile}</p>
+      <header className="artist-header">
+        <div className="artist-img">
+          <img src={artist.images[0].uri} alt="" />
+        </div>
 
-      <ul>
-        {artist.members.map((member, index) =>
-          member.active ? <li key={index}>{member.name}</li> : null
-        )}
-      </ul>
+        <h1>{artist.name}</h1>
 
-      <div>
-        <h3>Links</h3>
-        <ul>
-          {artist.urls.map((url, index) => (
-            <li key={index}>
-              <FontAwesomeIcon icon={faBandcamp} />
-              {url}
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div className="artist-profile">
+          <p className="artist-description">{artist.profile}</p>
+
+          {artist.members.length > 0 ? (
+            <div className="active-members">
+              <h3>Active Members</h3>
+
+              <ul>
+                {artist.members.map((member, index) =>
+                  member.active ? <li key={index}>{member.name}</li> : null
+                )}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="artist-links">
+          <IconList urls={artist.urls} />
+        </div>
+      </header>
 
       <div className="artist-gallery">
         {artist.images.map((img, index) => (
