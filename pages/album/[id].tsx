@@ -13,14 +13,24 @@ const Album: NextPage<Props> = ({ album }) => {
         <title>{album.title} - MusicList</title>
       </Head>
 
-      <img src={album.images[0].uri} alt="" />
-      <h1>{album.title}</h1>
-      <h3>{album.artists[0].name}</h3>
-      <h3>{album.year}</h3>
-      <p>{album.genres.join(', ')}</p>
-      <p>{album.styles.join(', ')}</p>
+      <header className="album-header">
+        <div className="album-cover">
+          <img src={album.images[0].uri} alt="" />
+        </div>
 
-      <table>
+        <div className="album-title">
+          <h1>{album.title}</h1>
+          <h3>{album.artists[0].name}</h3>
+          <h4>{album.year}</h4>
+        </div>
+
+        <div className="genres-list">
+          <p>{album.genres.join(', ')}</p>
+          <p>{album.styles.join(', ')}</p>
+        </div>
+      </header>
+
+      <table className="track-table">
         <tbody>
           {album.tracklist.map((track, index) => (
             <tr key={index}>

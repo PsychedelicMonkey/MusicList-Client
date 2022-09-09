@@ -7,4 +7,10 @@
 .container {
   max-width: 1450px;
   margin: auto;
+
+  @media (max-width: 900px) {
+    margin: auto 8px;
+  }
 }
+
+@import 'pages/album';

@@ -1,0 +1,57 @@
+.album-header {
+  .album-cover {
+    max-width: 520px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .album-title {
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 8px 0 12px;
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    h4 {
+      font-size: 22px;
+      font-weight: 300;
+      margin: 4px 0;
+    }
+  }
+
+  .genres-list {
+    font-size: 18px;
+    font-weight: 200;
+
+    p {
+      margin: 8px 0;
+    }
+  }
+}
+
+.track-table {
+  width: 100%;
+  margin: 22px 0 30px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+
+  td,
+  th {
+    font-size: 18px;
+    padding: 10px 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+}
