@@ -1,7 +1,7 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import api from '../lib/api';
+import ResultsTable from '../features/search/ResultsTable';
+import SearchForm from '../features/search/SearchForm';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
 
       <div>
         <h1>Home</h1>
+
+        <SearchForm />
+        <ResultsTable />
       </div>
     </div>
   );
