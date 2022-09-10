@@ -1,6 +1,6 @@
 import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
+import Meta from '../../components/Meta';
 import api from '../../lib/api';
 
 type Props = {
@@ -10,9 +10,11 @@ type Props = {
 const Album: NextPage<Props> = ({ album }) => {
   return (
     <div className="container">
-      <Head>
-        <title>{album.title} - MusicList</title>
-      </Head>
+      <Meta
+        title={album.title}
+        type="music.album"
+        image={album.images[0].uri}
+      />
 
       <header className="album-header">
         <div className="album-cover">
