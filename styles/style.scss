@@ -7,10 +7,6 @@
 .container {
   max-width: 1450px;
   margin: auto;
-
-  @media (max-width: 900px) {
-    margin: auto 8px;
-  }
 }
 
 .icon-list {
@@ -32,3 +28,5 @@
 
 @import 'pages/album';
 @import 'pages/artist';
+
+@import 'responsive';

@@ -1,0 +1,43 @@
+@media (max-width: 900px) {
+  .container {
+    margin: auto 8px;
+  }
+
+  .albums-cards {
+    .album {
+      width: 255px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .artist-header {
+    width: 100%;
+
+    .artist-img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .artist-description {
+      font-size: 16px;
+    }
+
+    .active-members {
+      ul {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  }
+
+  .albums-cards {
+    justify-content: center;
+    .album {
+      width: 90%;
+    }
+  }
+}

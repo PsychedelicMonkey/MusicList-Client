@@ -1,12 +1,13 @@
 .albums-cards {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: baseline;
   gap: 12px;
   padding: 22px 0 30px;
   border-top: 2px solid #eee;
 
   .album {
-    width: 250px;
+    width: 230px;
     padding: 8px;
     text-align: center;
     text-decoration: none;

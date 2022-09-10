@@ -52,13 +52,13 @@ const Artist: NextPage<Props> = ({ artist, albums }) => {
         ))}
       </section>
 
-      <div className="artist-gallery">
+      {/* <div className="artist-gallery">
         {artist.images.map((img, index) => (
           <div key={index}>
             <img src={img.uri} alt="" width={img.width} height={img.height} />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
