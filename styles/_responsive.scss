@@ -3,6 +3,22 @@
     margin: auto 8px;
   }
 
+  .artist-header {
+    h1 {
+      font-size: 32px;
+    }
+
+    .artist-description {
+      font-size: 16px;
+    }
+
+    .artist-profile {
+      .active-members li {
+        font-size: 16px;
+      }
+    }
+  }
+
   .albums-cards {
     .album {
       width: 255px;
