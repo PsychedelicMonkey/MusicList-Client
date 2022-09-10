@@ -9,6 +9,7 @@ const nextConfig = {
   },
   env: {
     API_URI: process.env.API_URI,
+    COOKIE_PASSWORD: process.env.COOKIE_PASSWORD,
   },
 };
 
