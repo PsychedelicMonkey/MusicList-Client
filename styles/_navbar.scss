@@ -1,0 +1,47 @@
+.navbar {
+  padding: 8px 0;
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 18px;
+  @include set-background(#eee);
+
+  &-items {
+    margin: auto;
+    max-width: $containerWidth;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  a {
+    color: $textMain;
+    text-decoration: none;
+  }
+
+  &-header {
+    font-size: 32px;
+  }
+
+  &-links {
+    font-size: 20px;
+    display: flex;
+    gap: 6px;
+  }
+
+  &-search {
+    align-self: center;
+
+    input {
+      outline: none;
+      border: none;
+      padding: 8px 18px;
+      font-size: 14px;
+      border-radius: 45px;
+      transition: 0.3s ease all;
+
+      &:focus {
+        background-color: #eee;
+      }
+    }
+  }
+}

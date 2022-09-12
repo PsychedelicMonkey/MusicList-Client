@@ -1,3 +1,6 @@
+@import 'color';
+@import 'config';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +8,7 @@
 }
 
 .container {
-  max-width: 1450px;
+  max-width: $containerWidth;
   margin: auto;
 }
 
@@ -15,7 +18,7 @@
 
   .icon {
     font-size: 28px;
-    color: #111;
+    color: $textMain;
     transition: 0.3s ease all;
 
     &:hover {
@@ -24,6 +27,7 @@
   }
 }
 
+@import 'navbar';
 @import 'album_card';
 
 @import 'pages/album';
