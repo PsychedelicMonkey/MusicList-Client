@@ -1,13 +1,20 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
 
 const Navbar = () => {
   const [query, setQuery] = useState('');
+  const router = useRouter();
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    alert(JSON.stringify({ query }));
+    if (query.length === 0) {
+      alert('Please enter a search term');
+      return;
+    }
+
+    router.push(`/results?query=${query}`);
   };
 
   return (
@@ -30,6 +37,8 @@ const Navbar = () => {
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
+
+            <button type="submit">Search</button>
           </form>
         </div>
 

@@ -31,6 +31,26 @@
   &-search {
     align-self: center;
 
+    form {
+      display: flex;
+      gap: 12px;
+
+      button[type='submit'] {
+        @include set-background(#0abd0a);
+        border: 1px solid #0abd0a;
+        font-size: 16px;
+        padding: 0 8px;
+        border-radius: 45px;
+        cursor: pointer;
+        transition: 0.3s ease all;
+
+        &:hover {
+          color: #0abd0a;
+          background-color: transparent;
+        }
+      }
+    }
+
     input {
       outline: none;
       border: none;
@@ -40,7 +60,7 @@
       transition: 0.3s ease all;
 
       &:focus {
-        background-color: #eee;
+        background-color: #aaa;
       }
     }
   }
